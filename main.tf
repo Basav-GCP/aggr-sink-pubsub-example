@@ -1,8 +1,8 @@
 module "pubsub" {
-  source  = "terraform-google-modules/pubsub/google"
+  source  = "git::https://github.com/Basav-GCP/gbdi-dbai-pubsub.git?ref=0.1"
   version = "~> 1.8"
-  topic      = "tf-topic"
-  project_id = "my-pubsub-project"
+  topic      = "postgres-log-sink"
+  project_id = "vaulted-keel-333115"
   kms_key_name = "key"
   pull_subscriptions = [
     {
